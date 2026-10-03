@@ -112,6 +112,16 @@ body{background:linear-gradient(180deg,#e4eff1 0,#edf3f4 440px,#edf3f4 100%)}
 .hero-primary:hover{background:#e7f4f6}
 .hero-secondary{color:#fff;border:1px solid rgba(255,255,255,.55)}
 .hero-secondary:hover{background:rgba(255,255,255,.1)}
+.hero-download{color:#173c49;background:#ffe6a5}
+.hero-download:hover{background:#fff0c9}
+.application-panel{display:flex;align-items:center;justify-content:space-between;gap:18px;padding:20px;border:1px solid #cbdde2;border-radius:12px;background:#f2f7f8}
+.application-panel h2{margin:3px 0 7px}
+.application-panel p{margin:0;color:#526970;font-size:13px;line-height:1.7}
+.application-links{display:flex;gap:9px;flex-wrap:wrap;flex:none}
+.application-links a{display:inline-flex;align-items:center;justify-content:center;min-height:41px;padding:0 14px;border-radius:7px;font-size:13px;font-weight:700;text-decoration:none}
+.application-links .download{background:#00566d;color:#fff}
+.application-links .email{border:1px solid #00566d;color:#00566d}
+.application-links a:hover{filter:brightness(.94)}
 .section-nav{position:sticky;top:0;z-index:30;display:flex;gap:5px;align-items:center;overflow-x:auto;scrollbar-width:none;-webkit-overflow-scrolling:touch;background:rgba(255,255,255,.96);backdrop-filter:blur(10px);border-bottom:1px solid var(--line);padding:8px 18px;box-shadow:0 4px 16px rgba(0,43,56,.06)}
 .section-nav::-webkit-scrollbar{display:none}
 .section-nav a{flex:none;display:inline-flex;align-items:center;justify-content:center;min-height:38px;padding:0 12px;border-radius:7px;color:#49616a;text-decoration:none;font-size:12px;font-weight:700;white-space:nowrap;transition:background .2s,color .2s}
@@ -205,6 +215,7 @@ a:focus-visible,button:focus-visible,img.zoomable:focus-visible{outline:3px soli
 .school-gallery .gallery-wide img{aspect-ratio:16/9}
 .school-gallery figcaption{min-height:52px}
 @media(max-width:699px){.school-gallery{gap:8px}.school-gallery figcaption{font-size:11px;padding:8px;min-height:64px}}
+@media(max-width:699px){.application-panel{display:block;padding:17px}.application-links{margin-top:14px}.application-links a{flex:1;min-width:125px}}
 </style>
 </head>
 <body>
@@ -224,14 +235,29 @@ a:focus-visible,button:focus-visible,img.zoomable:focus-visible{outline:3px soli
     <div class="hero-actions">
       <a class="hero-primary" href="#video">看技能视频 <span aria-hidden="true">↗</span></a>
       <a class="hero-secondary" href="#teaching">看教学实证 <span aria-hidden="true">↓</span></a>
+      <a class="hero-download" href="吴宇航_体育教师通用简历.pdf" download>下载通用简历 <span aria-hidden="true">↓</span></a>
     </div>
   </div>
 
   <nav class="section-nav" aria-label="展示页目录">
     <a href="#video">视频</a><a href="#competition">竞技</a><a href="#teaching">执教</a>
     <a href="#shenzhen-gallery">深二实照片</a><a href="#project">项目</a><a href="#research">科研</a>
-    <a href="#certificates">证书</a><a href="#versatility">技能</a><a href="#education">教育</a>
+    <a href="#certificates">证书</a><a href="#versatility">技能</a><a href="#education">教育</a><a href="#application">投递</a>
   </nav>
+
+  <section id="application" aria-labelledby="application-title">
+    <div class="application-panel">
+      <div>
+        <span class="section-index">简历与联系</span>
+        <h2 id="application-title">投递资料</h2>
+        <p>通用简历适用于初步了解；报名时请以对应岗位公告和系统要求提交材料。</p>
+      </div>
+      <div class="application-links">
+        <a class="download" href="吴宇航_体育教师通用简历.pdf" download>下载简历 PDF</a>
+        <a class="email" href="mailto:1029105868@qq.com?subject=%E4%BD%93%E8%82%B2%E6%95%99%E5%B8%88%E5%BA%94%E8%81%98%E8%81%94%E7%B3%BB">邮件联系</a>
+      </div>
+    </div>
+  </section>
 
   <section class="video-section" id="video">
     <div class="section-heading">
@@ -297,7 +323,7 @@ a:focus-visible,button:focus-visible,img.zoomable:focus-visible{outline:3px soli
     <div class="card">
       <div class="ct">深圳第二实验学校<span class="tag">实习体育教师</span></div>
       <div class="cm">公办高中 · 教育实习 · 2026.09 – 2026.11（在岗）</div>
-      <div class="cb">高一、高二体育选项课教学，覆盖 10 个行政班，按模块合班授课，主教篮球，周课时 9 节；另承担大课间与课后训练。校女子高水平篮球队综合体能训练。参与校体育节、校运动会等校级体育活动的策划。实习结束后可提供学校实习证明与鉴定表。</div>
+      <div class="cb">高一、高二体育选项课教学，覆盖 10 个行政班，按模块合班授课，主教篮球，周课时 9 节；另承担大课间与课后训练。校女子高水平篮球队综合体能训练。参与校体育节、校运动会等校级体育活动的策划。</div>
     </div>
     <div class="card">
       <div class="ct">东莞鼎胜体育<span class="tag">短跑主教</span></div>
@@ -409,12 +435,12 @@ a:focus-visible,button:focus-visible,img.zoomable:focus-visible{outline:3px soli
       <div class="ct">华中师范大学　运动训练专业　本科</div>
       <div class="cm">教育部直属师范院校（211 / 双一流）· 2023.09 – 2027.06</div>
       <div class="cb">教育学学士（预计 2027.06 授予）· 校级奖学金（2024.12）· 田径专项（100m）</div>
-      <div class="cb">教师资格证（高中体育）：笔试已过 2 科，科目二备考中。</div>
+      <div class="cb">高中体育教师资格考试：笔试已过 2 科，科目二备考中。</div>
     </div>
   </section>
 
   <footer>
-    证书与赛事材料可提供原件核验；在岗实习证明待实习结束后补充<br>
+    证书与赛事材料可提供原件核验；教学展示持续更新<br>
     华中师范大学 · 运动训练专业 · 2027 届
   </footer>
 </div>
@@ -426,7 +452,7 @@ var VIDEOS = [
   { label: "综合技能展示", file: "video1.mp4",
     cap: "篮球 · 跨栏 · 短跑 · 跳高 —— 多项目动作示范", poster: POSTER },
   { label: "说课教学展示", file: null,
-    cap: "说课与课堂教学实录" }
+    cap: "说课与动作示范" }
 ];
 (function () {
   var host = document.getElementById('vsecs');
